@@ -1,6 +1,23 @@
-<?php get_header(); ?>
+<?php get_header();
+?>
 
-<div class="container-fluid mb-3">
+<!--*** Contact us Section-1 Start *** -->
+<div class="container-fluid vig-bg-photo position-relative px-0 mb-md-5 mb-2">
+    <div class="vig-bg-color position-absolute d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white display-4 font-weight-bold text-center mb-0">
+                        Tutorial
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--*** Contact us Section-1 End *** -->
+
+<div class="container mb-3">
     <div class="row">
         <div class="col-md-3 bg-white vl d-none d-md-block">
             <?php
@@ -24,7 +41,6 @@
         <div class="col-md-9">
             <!-- Mobile Dropdown for Tutorial Selection -->
             <div class="w-100 mb-2 d-block d-md-none">
-                <h4>ভিডিও টিউটোরিয়াল</h4>
                 <select class="form-control" lang="bn" onchange="if(this.value) window.location.href=this.value;">
                     <option value="" disabled hidden selected>-- ভিডিও টিউটোরিয়াল সিলেক্ট করুন --</option>
                     <?php
@@ -69,9 +85,7 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
                             </iframe>
                         </div>
-                        <div class="vide-title-for-mobile">
-                            <h2><?php the_title(); ?></h2>
-                        </div>
+
             <?php
                     endif;
                 endwhile;

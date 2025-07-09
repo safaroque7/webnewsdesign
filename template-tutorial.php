@@ -46,7 +46,6 @@ function convert_to_embed_url($url)
         <div class="col-md-9">
             <!-- Mobile Dropdown -->
             <div class="w-100 mb-2 d-block d-md-none">
-                <h4>ভিডিও টিউটোরিয়াল</h4>
                 <select class="form-control" lang="bn" onchange="if(this.value) window.location.href=this.value;">
                     <option value="" disabled hidden selected>-- ভিডিও টিউটোরিয়াল সিলেক্ট করুন --</option>
                     <?php
