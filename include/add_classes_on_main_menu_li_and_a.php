@@ -27,7 +27,7 @@ function add_classes_on_main_menu_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_classes_on_main_menu_li', 10, 3);
 
-//add_classes_on_main_menu_li
+//add_classes_on_main_menu_li a
 function add_classes_on_main_menu_a($atts, $item, $args)
 {
     // Check if the menu location is 'mainMenu'
@@ -154,7 +154,7 @@ add_filter('nav_menu_css_classes', 'add_classes_on_useful_link_menu_li', 10, 3);
 function add_classes_on_useful_link_menu_li_a($atts, $item, $args)
 {
     if ($args->theme_location === 'useful-link-menu') {
-        $atts['class'] = 'nav-link text-dark';
+        $atts['class'] = 'nav-link text-dark link-padding-bottom';
     }
     return $atts;
 }

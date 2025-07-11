@@ -35,6 +35,10 @@
 
 
     <style>
+        body {
+            background-image: url(<?php echo esc_url(get_template_directory_uri() . '/images/background-for-body.jpg') ?>);
+        }
+
         .vig-bg-photo {
             background-image: url(<?php echo esc_url(get_template_directory_uri() . '/images/breadcrumb-background-image.png'); ?>);
             height: 300px;

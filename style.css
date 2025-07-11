@@ -18,7 +18,7 @@ Text Domain: portfolio
 
 body {
   font-family: "solaimanlipi";
-  /* background-image: url(images/main_bg2.jpg); */
+  /* background-image: url(images/background-for-body.jpg); */
   font-weight: lighter;
 }
 
@@ -1538,7 +1538,7 @@ div#attachment_1468 {
 /* Mobile styles */
 @media screen and (max-width: 768px) {
   .link-padding-bottom {
-    padding: 0.3rem 0.75rem;
+    padding: 0.3rem;
   }
 
   /* Your mobile-specific CSS */
