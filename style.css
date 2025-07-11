@@ -1366,7 +1366,6 @@ ul#menu-main_menu li a {
 }
 
 ul#menu-main_menu li a {
-  color: #fff;
   padding: 10px;
   font-size: 16px;
 }
@@ -1400,8 +1399,7 @@ ul#menu-products li a {
 }
 
 ul#menu-main_menu li a:hover {
-  background: black;
-  color: #fff;
+  text-decoration: underline;
 }
 
 ul#menu-products li a:hover {
