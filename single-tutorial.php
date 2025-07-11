@@ -84,8 +84,8 @@
                                 loading="lazy"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
                             </iframe>
-                            <h6><?php the_title(); ?></h6>
                         </div>
+                        <h6><?php the_title(); ?></h6>
             <?php
                     endif;
                 endwhile;
