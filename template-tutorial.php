@@ -89,7 +89,7 @@ function convert_to_embed_url($url)
                             </iframe>
                         </div>
                         <div class="vide-title-for-mobile">
-                            <h1><?php the_title(); ?></h1>
+                            <h6><?php the_title(); ?></h6>
                         </div>
             <?php
                     endif;
