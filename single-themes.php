@@ -8,7 +8,7 @@
 
 				<div class="theme_name bg-white p-2 mb-3 pl-3">
 					<?php setPostViews(get_the_ID()); ?>
-					<h3 class="mb-0"> থিমের নাম : <?php the_title(); ?> </h3>
+					<h3 class="mb-0"> Theme's Name : <?php the_title(); ?> </h3>
 					<?php if (is_user_logged_in()) { ?>
 						<span class="float-right h6 mb-0"> <?php echo getPostViews(get_the_ID()); ?> </a> </span>
 					<?php } ?>
@@ -26,7 +26,7 @@
 					<div class="row justify-content-center">
 						<div class="col-md-4 pr-0">
 
-							<h4 class="butn btn-success text-center"> <a href="<?php echo the_field('themeLiveDemo'); ?>" target="_blank" class="text-white liveDemo p-2 d-block rounded"> লাইভ ডেমো দেখুন </a> </h4>
+							<h4 class="butn btn-success text-center"> <a href="<?php echo the_field('themeLiveDemo'); ?>" target="_blank" class="text-white liveDemo p-2 d-block rounded"> Live Demo Link </a> </h4>
 						</div>
 
 					</div>
@@ -36,7 +36,7 @@
 					if (!empty($content)) { ?>
 
 						<div class="bg-success mb-3">
-							<h5 class="bg-dark text-white p-2 mb-0 d-inline-block p-2"> বিস্তারিত বর্ণনা </h5>
+							<h5 class="bg-dark text-white p-2 mb-0 d-inline-block p-2"> Details </h5>
 						</div>
 
 					<?php } ?>
@@ -185,7 +185,7 @@
 
 			<div class="aboutTheme bg-white px-2 pt-2 pb-0 mb-3">
 				<div class="uTitlt">
-					<h5 class="border-bottom font-weight-bold"> সর্বশেষ আপডেট </h5>
+					<h5 class="border-bottom font-weight-bold"> Last Update </h5>
 					<h5> <?php $u_modified_time = get_the_modified_time('d F Y');
 							echo $u_modified_time;  ?> </h5>
 				</div>
@@ -193,28 +193,28 @@
 
 			<div class="aboutTheme bg-white px-2 pt-2 pb-0 mb-3">
 				<div class="uTitlt">
-					<h5 class="border-bottom font-weight-bold"> আপলোড সময় </h5>
+					<h5 class="border-bottom font-weight-bold"> Posted Time </h5>
 					<h5> <?php the_time('d F Y'); ?> </h5>
 				</div>
 			</div>
 
 			<div class="aboutTheme bg-white px-2 pt-2 pb-0 mb-3">
 				<div class="uTitlt">
-					<h5 class="border-bottom font-weight-bold"> গঠন </h5>
+					<h5 class="border-bottom font-weight-bold"> Structures </h5>
 					<h5> <?php echo the_field('structure'); ?> </h5>
 				</div>
 			</div>
 
 			<div class="aboutTheme bg-white px-2 pt-2 pb-0 mb-3">
 				<div class="uTitlt">
-					<h5 class="border-bottom font-weight-bold"> সফটওয়্যার ভার্সন </h5>
+					<h5 class="border-bottom font-weight-bold"> Version </h5>
 					<?php echo the_field('SoftwareVersion'); ?>
 				</div>
 			</div>
 
 			<div class="aboutTheme bg-white px-2 pt-2 pb-0 mb-3">
 				<div class="uTitlt">
-					<h5 class="border-bottom font-weight-bold"> সংযুক্ত ফাইল </h5>
+					<h5 class="border-bottom font-weight-bold"> Attched Files </h5>
 					<?php echo the_field('addFiles'); ?>
 				</div>
 			</div>
@@ -223,7 +223,7 @@
 	<?php endwhile; ?>
 	</div>
 	<div class="relatate_theme bg-success mb-3">
-		<h5 class="bg-dark text-white p-2 mb-0 d-inline-block p-2"> এ জাতীয় আরো থিম </h5>
+		<h5 class="bg-dark text-white p-2 mb-0 d-inline-block p-2"> Related Themes </h5>
 	</div>
 	<div class="row">
 
@@ -274,7 +274,7 @@
 							<?php } ?>
 
 							<div class="themeDetails w-100 h-100 position-absolute d-flex justify-content-center">
-								<a href="<?php the_permalink(); ?>" class="d-inline-block bg-white text-dark p-2 rounded"> বিস্তারিত দেখুন </a>
+								<a href="<?php the_permalink(); ?>" class="d-inline-block bg-white text-dark p-2 rounded"> Details </a>
 							</div>
 
 						</div>
@@ -282,13 +282,11 @@
 						<h5 class="border-bottom pb-1 mb-2"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a> </h5>
 
 						<div class="theme_price">
-							<h6 class="license"> সিঙ্গেল লাইসেন্স <span class="float-right"> <?php the_field('SingleLiecence'); ?> </span> </h6>
-							<!-- <h6 class="license"> আনলিমিটেড লাইসেন্স <span class="float-right"> <?php //the_field('UnlimitedLiecence'); 
-																									?> </span> </h6> -->
+							<h6 class="license"> Single License <span class="float-right"> <?php the_field('SingleLiecence'); ?> </span> </h6>
 						</div>
 
 						<div class="demoLInk text-center">
-							<h6 class="mb-0"> <a href="<?php echo the_field('themeLiveDemo'); ?>" class="rounded bg-success text-white text-center d-inline-block p-2"> ডেমো দেখুন </a> </h6>
+							<h6 class="mb-0"> <a href="<?php echo the_field('themeLiveDemo'); ?>" class="rounded bg-success text-white text-center d-inline-block p-2"> Demo </a> </h6>
 						</div>
 					</div>
 				</div>

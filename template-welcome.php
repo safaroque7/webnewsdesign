@@ -18,7 +18,7 @@ get_header();
 
         //  start quering
         while ($query->have_posts()): $query->the_post(); ?>
-            <?php get_template_part('part/themeQuery'); ?>
+            <?php get_template_part('part/theme-query'); ?>
         <?php endwhile;
         wp_reset_postdata(); ?>
     </div>

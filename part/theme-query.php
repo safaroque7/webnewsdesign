@@ -13,8 +13,7 @@
 				<?php } ?>
 
 				<div class="themeDetails w-100 h-100 position-absolute d-flex justify-content-center">
-					<a href="<?php the_permalink(); ?>" class="d-inline-block bg-white text-dark p-2 rounded"> বিস্তারিত
-						দেখুন </a>
+					<a href="<?php the_permalink(); ?>" class="d-inline-block bg-white text-dark p-2 rounded"> Details </a>
 				</div>
 
 			</div>
@@ -23,7 +22,7 @@
 					<?php the_title(); ?> </a> </h4>
 
 			<div class="theme_price border-bottom pb-1 mb-3">
-				<h6> সিঙ্গেল লাইসেন্স <span class="float-right"> ৳ <?php the_field('SingleLiecence'); ?> </span> </h6>
+				<h6> Single License <span class="float-right"> ৳ <?php the_field('SingleLiecence'); ?> </span> </h6>
 				<!-- <h6> আনলিমিটেড লাইসেন্স <span class="float-right"> <?php //the_field('UnlimitedLiecence'); 
 																		?> টাকা </span> </h6> -->
 			</div>
@@ -33,13 +32,13 @@
 				<h6 class="mb-0">
 					<a href="<?php echo the_field('themeLiveDemo'); ?>" target="_blank"
 						class="border border-dark rounded bg-light text-dark text-center d-inline-block p-2 float-left rounded-lg">
-						ডেমো দেখুন </a>
+						Demo </a>
 				</h6>
 
 				<h6 class="mb-0">
 					<a href="<?php the_permalink(); ?>" target="_blank"
 						class="border border-dark rounded bg-light text-dark text-center d-inline-block p-2 float-left">
-						ডাউনলোড </a>
+						Buy Now </a>
 				</h6>
 
 			</div>
