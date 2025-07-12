@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<div class="container-fluid mb-md-5 mb-3 px-0">
+<div class="container-fluid mb-md-4 mb-2 px-0">
     <img src="<?php echo get_template_directory_uri() . '/images/slider-1.jpg'; ?>" class="w-100" alt="<?php echo esc_attr(get_bloginfo('name') . ' homepage slider image'); ?>">
 </div>
 
