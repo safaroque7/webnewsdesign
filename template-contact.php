@@ -63,7 +63,8 @@ include_once('include/breadcrumb-design.php');
 
         <!-- Get In Touch part start  -->
         <div class="col-md-7 mt-md-0 mt-3 border border-white">
-            <?php do_shortcode('[contact-form-7 id="3245df7" title="Contact form 1"]') ?>
+            <?php echo do_shortcode('[contact-form-7 id="3245df7" title="Contact form 1"]') ?>
+
 
         </div>
         <!-- Get In Touch part end  -->
