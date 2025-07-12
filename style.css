@@ -1592,3 +1592,7 @@ div#faroqueIdForBottom ul li a {
 .navbar-hover-text-decoration-underline li a:hover {
   text-decoration: underline;
 }
+
+.modified-class-send-message p {
+  display: flex;
+}
