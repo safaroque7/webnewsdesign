@@ -1544,6 +1544,9 @@ div#attachment_1468 {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+  .font-size-for-mobile {
+    font-size: 19px;
+  }
   span.wpcf7-quiz-label {
     justify-content: center;
     display: flex;
@@ -1599,4 +1602,10 @@ div#faroqueIdForBottom ul li a {
 
 .modified-class-send-message p {
   display: flex;
+}
+
+.accordion-content {
+  white-space: normal;
+  text-align: left;
+  overflow-wrap: break-word;
 }

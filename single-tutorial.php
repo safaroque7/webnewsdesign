@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
-                    <p class="text-white display-4 font-weight-bold text-center mb-0">
+                    <p class="text-white display-4 font-weight-bold text-center mb-0 font-size-for-mobile">
                         Tutorial
                     </p>
                 </div>

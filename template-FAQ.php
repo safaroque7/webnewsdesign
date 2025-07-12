@@ -14,29 +14,23 @@ $faq = new WP_Query(array(
 
 <div class="container mb-md-5 mb-0">
     <div class="row mb-md-3 mb-3">
-        <div class="col-md-8 mx-auto accordion" id="accordionExample">
+        <div class="col-md-8 mx-auto accordion" id="accordion">
             <?php while ($faq->have_posts()) : $faq->the_post(); ?>
-                <?php $id = get_the_ID(); ?>
                 <div class="card">
-                    <div class="card-header" id="heading<?php echo esc_attr($id); ?>">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left text-dark"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapse<?php echo esc_attr($id); ?>"
-                                aria-expanded="false"
-                                aria-controls="collapse<?php echo esc_attr($id); ?>"
-                                aria-label="Toggle section <?php echo esc_attr($id); ?>">
+                    <?php $post_id =  get_the_ID(); ?>
+                    <div class="card-header" id="heading<?php echo $post_id; ?>">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-dark accordion-content" data-toggle="collapse" data-target="#collapse<?php echo $post_id; ?>" aria-expanded="true" aria-controls="collapse<?php echo $post_id; ?>">
                                 <?php the_title(); ?>
                             </button>
-                        </h2>
+                        </h5>
                     </div>
 
-                    <div id="collapse<?php echo esc_attr($id); ?>"
-                        class="collapse"
-                        aria-labelledby="heading<?php echo esc_attr($id); ?>">
-                        <div class="card-body">
-                            <?php the_content(); ?>
+                    <div id="collapse<?php echo $post_id; ?>" class="collapse" aria-labelledby="heading<?php echo $post_id; ?>" data-parent="#accordion">
+                        <div class="card-body text-dark">
+                            <?php
+                            the_content();
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -56,4 +50,4 @@ $faq = new WP_Query(array(
     </div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer();
