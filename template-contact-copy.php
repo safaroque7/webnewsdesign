@@ -63,7 +63,40 @@ include_once('include/breadcrumb-design.php');
 
         <!-- Get In Touch part start  -->
         <div class="col-md-7 mt-md-0 mt-3 border border-white">
-            <?php do_shortcode('[contact-form-7 id="3245df7" title="Contact form 1"]') ?>
+            <div class="border">
+                <div class="d-flex p-3">
+                    <div class="vr icon-color opacity-100" style="width:5px ; height: 35px;"></div>
+                    <h3 class="ps-3">Get In Touch</h3>
+                </div>
+                <div class="px-3">
+                    <label for="exampleFormControlInput2" class="form-label">Enter Your Name</label>
+                    <input type="name" class="form-control border-0 border-bottom rounded-0"
+                        id="exampleFormControlInput2">
+                </div>
+                <div class="px-3">
+                    <label for="exampleFormControlInput3" class="form-label pt-2">Enter Your Phone</label>
+                    <input type="phone" class="form-control border-0 border-bottom rounded-0"
+                        id="exampleFormControlInput3">
+                </div>
+
+                <div class="px-3">
+                    <label for="exampleFormControlInput1" class="form-label pt-2">Enter Your Email</label>
+                    <input type="email" class="form-control border-0 border-bottom rounded-0"
+                        id="exampleFormControlInput1">
+                </div>
+
+                <div class="px-3">
+                    <label for="exampleFormControlTextarea1" class="form-label pt-2">Type Message</label>
+                    <textarea class="form-control border-0 border-bottom rounded-0"
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="py-3 d-flex justify-content-center">
+                    <a href="#"> <button type="submit" class="brand-color border-0 py-2 px-3 rounded-1"> Send
+                            Message
+                        </button></a>
+                </div>
+            </div>
 
         </div>
         <!-- Get In Touch part end  -->
