@@ -1544,6 +1544,9 @@ div#attachment_1468 {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
+  .navbar-brand {
+    width: 225px !important;
+  }
   .font-size-for-mobile {
     font-size: 19px;
   }
@@ -1608,4 +1611,8 @@ div#faroqueIdForBottom ul li a {
   white-space: normal;
   text-align: left;
   overflow-wrap: break-word;
+}
+
+.navbar-brand {
+  width: 350px;
 }
