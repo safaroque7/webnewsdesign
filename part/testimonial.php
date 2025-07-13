@@ -18,7 +18,7 @@
                         while($custom_post->have_posts()): $custom_post->the_post();{ ?>
 
                         <!-- per item start -->
-                        <li class="row d-flex">
+                        <li class="row d-flex align-items-center">
                             <div class="col-5 image-identity pl-0">
 
                                 <?php
@@ -26,7 +26,7 @@
                                 ?>
 
                                 <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"
-                                    class="img-fluid circle pl-0 ml-0">
+                                    class="img-fluid circle pl-0 ml-0 mb-2">
 
                                 <h5> <?php the_title();?> </h5>
                                 <?php 
@@ -50,7 +50,7 @@
                                 ?>
                             </div>
                             <div class="col-6 comment d-flex justify-content-center align-items-center">
-                                <p class="mb-0 mb-0"> <?php the_content();?> </p>
+                                <?php the_content();?>
                             </div>
                         </li>
                         <!-- per item end -->
