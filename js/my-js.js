@@ -1,7 +1,7 @@
 (function ($) {
     $('.flexslider').flexslider({
         animation: "slide",
-        animationLoop: false,
+        animationLoop: true,
         slideshow: true,
         itemWidth: 350,
         itemMargin: 15,

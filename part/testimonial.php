@@ -8,176 +8,56 @@
                 <div class="flexslider carousel">
                     <ul class="slides">
 
+                        <?php
+                        $custom_post = new WP_Query(array(
+                            'post_type'         =>  'testimonial',
+                            'posts_per_page'    =>  5,
+                            'order'             =>  'ASC'
+                        ));
+
+                        while($custom_post->have_posts()): $custom_post->the_post();{ ?>
+
                         <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
+                        <li class="row d-flex">
+                            <div class="col-5 image-identity pl-0">
+
+                                <?php
+                                    $image_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                                ?>
+
+                                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"
+                                    class="img-fluid circle pl-0 ml-0">
+
+                                <h5> <?php the_title();?> </h5>
+                                <?php 
+                                    // position
+                                    $position_name = get_field('position_name');
+                                    if(!empty($position_name)){ ?>
+                                <p class="mb-0"> <?php echo $position_name; ?> </p>
+                                <?php }
+                                
+                                    // office_name
+                                    $office_name = get_field('office_name');
+                                    if(!empty($office_name)){ ?>
+                                <p class="mb-0 font-weight-bold"> <?php echo $office_name; ?> </p>
+                                <?php }
+
+                                    // address
+                                    $address_name = get_field('address_name');
+                                    if(!empty($address_name)){ ?>
+                                <p class="mb-0"> <?php echo $address_name; ?> </p>
+                                <?php }
+                                ?>
                             </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
+                            <div class="col-6 comment d-flex justify-content-center align-items-center">
+                                <p class="mb-0"> <?php the_content();?> </p>
                             </div>
                         </li>
                         <!-- per item end -->
 
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
-                        <!-- per item start -->
-                        <li class="d-flex ">
-                            <div class="col-5 image-identity ">
-                                <img src="https://picsum.photos/100" alt="Monowarul Islam"
-                                    class="img-fluid circle mt-0 mr-0 mb-2 ml-0">
-                                <h5> Monowarul Islam </h5>
-                                <p class="mb-0"> New York, USA </p>
-                            </div>
-                            <div class="col-7 comment d-flex justify-content-center align-items-center">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat animi iste
-                                    saepe nostrum nemo harum libero assumenda aliquid inventore? Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Vel quaerat animi iste saepe nostrum nemo harum
-                                    libero assumenda aliquid inventore? </p>
-                            </div>
-                        </li>
-                        <!-- per item end -->
-
+                        <?php }
+                    endwhile; wp_reset_postdata();
+                    ?>
 
                         <!-- items mirrored twice, total of 12 -->
                     </ul>

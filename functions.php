@@ -18,7 +18,10 @@ include_once('include/menu.php');
 include_once('include/custom_post_tutorial.php');
 
 //for themes
-include_once('include/custom_post_type_themes.php');
+include_once('include/custom-post-type-themes.php');
+
+//for themes
+include_once('include/custom-post-type-testimonial.php');
 
 //for themes
 include_once('include/content_below_tag.php');
