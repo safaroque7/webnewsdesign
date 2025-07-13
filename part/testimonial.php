@@ -50,7 +50,7 @@
                                 ?>
                             </div>
                             <div class="col-6 comment d-flex justify-content-center align-items-center">
-                                <p class="mb-0"> <?php the_content();?> </p>
+                                <p class="mb-0 mb-0"> <?php the_content();?> </p>
                             </div>
                         </li>
                         <!-- per item end -->
