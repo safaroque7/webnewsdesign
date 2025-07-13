@@ -81,6 +81,17 @@
         </div>
     </div>
 </div>
+<div class="container-fluid bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Copyright Notice Start -->
+                <p class="mb-0 py-md-2 py-1"> © 2013 - <?php echo date('Y'); ?> WebNewsDesign. All Rights Reserved. </p>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright Notice End -->
+</div>
 <?php wp_footer(); ?>
 </body>
 
