@@ -3,20 +3,9 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta http-equiv="refresh" content="600" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
 
     <meta name="keywords" content="online news porta, news portal, news, portal, bangladesh, sheikh hasina, begum khaleda zia, hossain mohammad ershad, sakib al hasan, mustafizur rahman, cricket, coxsbazar, cox, bandarbon, sylhet tea garden, tea, garden, bangladesh best web design house, website desin, web development, s a faroque, webnewsdesign.com, webnewsdesign, nilgiri, news, news bangladesh, bangladesh viral news, viral video, 01915344418, faroque.computer@gmail.com, বাংলাদেশ, ক্রিকেট, সাকিব আল হাসান, মুস্তাফিজ, ক্রিকেট স্কোর, নিউজ পোর্টাল, নিউজ, পোর্টাল, নিউজপেপার ওয়েবসাইট, নিউজ পেপার, নিউজ পেপার ওয়েবসাইট, ওয়েবসাইট, বাংলা ওয়েবসাইট, খবর, বাংলাদেশের, খবর, প্রথম আলো, বাংলাদেশ প্রতিদিন, বিশ্বের খবরাখবর, নিউজ পোর্টাল তৈরি করতে চাই, একটা নিউজ পোর্টাল">
-
-    <title> <?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?> </title>
-
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
 
     <?php wp_head(); ?>
 
