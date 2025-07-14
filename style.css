@@ -1538,11 +1538,21 @@ div#attachment_1468 {
   padding-top: 4px;
 }
 
+.review-image > img{
+  width: 100px;
+  height: 100px;
+}
+
 /* Mobile styles */
 @media screen and (max-width: 768px) {
   .navbar-brand {
     width: 225px !important;
   }
+
+  .review-image > img{
+  width: 100px;
+  height: 100px;
+}
 
   .font-size-for-mobile {
     font-size: 19px;
@@ -1622,6 +1632,28 @@ div#faroqueIdForBottom ul li a {
   height: 46px;
 }
 
-.testimonial > .flexslider {
-    border: 13px solid #fff;
+.testimonial>.flexslider {
+  border: none;
+  background: none !important;
+}
+
+.review-image {
+  width: 20%;
+  height: 20%;
+}
+
+.reviewer-name-address {
+  width: 77%;
+}
+
+.rounded-wnd {
+  border-radius: 26px;
+}
+
+.rounded-wnd p {
+  margin-bottom: 0;
+}
+
+.text-align-justify-wnd p {
+  text-align: justify;
 }

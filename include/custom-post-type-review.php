@@ -1,17 +1,17 @@
 <?php
-function custom_post_type_testimonial() {
+function custom_post_type_review() {
 
     // Register custom post type
-    register_post_type('testimonial', array(
-        'label'               => 'Testimonial Post',
+    register_post_type('review', array(
+        'label'               => 'eview Post',
         'labels'              => array(
-            'name'               => __('Testimonial Post'),
-            'singular_name'      => __('Testimonial'),
+            'name'               => __('Review Post'),
+            'singular_name'      => __('review'),
             'add_new'            => __('Add New'),
-            'add_new_item'       => __('Add New Theme'),
-            'edit_item'          => __('Edit Theme'),
-            'view_item'          => __('View Theme'),
-            'new_item'           => __('New Theme'),
+            'add_new_item'       => __('Add New review'),
+            'edit_item'          => __('Edit review'),
+            'view_item'          => __('View review'),
+            'new_item'           => __('New review'),
             'not_found'          => __('Sorry, we couldn\'t find anything you are looking for'),
         ),
         'public'              => true,
@@ -19,9 +19,9 @@ function custom_post_type_testimonial() {
         'exclude_from_search' => false,
         'has_archive'         => true,
         'menu_position'       => 6,
-        'rewrite'             => array('slug' => 'Testimonial'),
+        'rewrite'             => array('slug' => 'review'),
         'supports'            => array('title', 'editor', 'thumbnail', 'custom-fields'),
         'show_in_rest'        => true, // Gutenberg support
     ));
 }
-add_action('init', 'custom_post_type_testimonial');
+add_action('init', 'custom_post_type_review');

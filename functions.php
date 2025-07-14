@@ -21,7 +21,7 @@ include_once('include/custom_post_tutorial.php');
 include_once('include/custom-post-type-themes.php');
 
 //for themes
-include_once('include/custom-post-type-testimonial.php');
+include_once('include/custom-post-type-review.php');
 
 //for themes
 include_once('include/content_below_tag.php');
