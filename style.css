@@ -1657,3 +1657,7 @@ div#faroqueIdForBottom ul li a {
 .text-align-justify-wnd p {
   text-align: justify;
 }
+
+.testimonial>.flexslider {
+    margin-bottom: 0;
+}g
