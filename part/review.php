@@ -6,7 +6,10 @@
         $count_posts    =   wp_count_posts($post_type);
         $total_post     =   $count_posts->publish;
         ?>
-        <h3 class="mb-md-4 mb-2"> Review (<?php echo esc_html($total_post); ?>) </h3>
+        <h3 class="mb-md-4 mb-2 review">
+            <a class="text-dark" href="<?php echo esc_url('https://www.facebook.com/webnewsdesign/reviews'); ?>" target="_blank"> Review (<?php echo esc_html($total_post); ?>)
+            </a>
+        </h3>
         <div class="row">
             <div class="col-12 testimonial">
 
