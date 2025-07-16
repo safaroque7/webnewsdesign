@@ -1674,3 +1674,8 @@ div#faroqueIdForBottom ul li a {
 .review a:hover {
   text-decoration: underline #ef4823 !important;
 }
+
+.review-image img {
+  width: 100px;
+  height: 100px;
+}
