@@ -8,7 +8,9 @@
         itemWidth: 350,
         itemMargin: 15,
         minItems: 1,
-        maxItems: 1
+        maxItems: 1,
+        controlNav: false
+
     });
 
     // For Google Review
@@ -19,6 +21,7 @@
         itemWidth: 350,
         itemMargin: 15,
         minItems: 1,
-        maxItems: 1
+        maxItems: 1,
+        controlNav: false
     });
 })(jQuery);
