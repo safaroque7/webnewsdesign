@@ -1,5 +1,5 @@
 <!-- Themes Start -->
-<div class="container mb-md-5 mb-2">
+<div class="container mb-5">
   <h3 class="mb-md-4 mb-2"> Themes </h3>
   <div class="row">
     <?php

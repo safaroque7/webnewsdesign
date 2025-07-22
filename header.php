@@ -62,7 +62,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div class="container-fluid bg-light mb-md-4 mb-2">
+    <div class="container-fluid bg-light mb-5">
         <div class="container px-0">
 
             <nav class="navbar navbar-expand-lg navbar-light px-0">

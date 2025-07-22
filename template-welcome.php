@@ -13,5 +13,8 @@ get_template_part('part/themes');
 // testimonial
 get_template_part('part/review');
 
+// achievement-section
+get_template_part('part/achievement-section');
+
 //footer
 get_footer();
