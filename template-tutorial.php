@@ -31,8 +31,7 @@ function convert_to_embed_url($url)
                 'posts_per_page'    => -1
             );
             $query = new WP_Query($args);
-            ?>
-            <?php 
+             
             $tutorial_serial_number = 1;
             while ($query->have_posts()) : $query->the_post(); ?>
             <h5 class="border-bottom py-2">

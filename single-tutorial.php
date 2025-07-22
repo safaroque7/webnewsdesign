@@ -19,22 +19,26 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col-md-3 bg-white vl d-none d-md-block">
+        <div class="col-md-3 bg-white vl d-none d-md-block pb-md-3">
             <?php
             $args = array(
-                'post_type' => 'tutorial',
-                'order' => 'ASC',
-                'posts_per_page' => -1,
+                'post_type'         => 'tutorial',
+                'order'             => 'ASC',
+                'posts_per_page'    => -1
             );
             $query = new WP_Query($args);
-            ?>
-            <?php while ($query->have_posts()) : $query->the_post(); ?>
-                <h5 class="border-bottom py-2">
-                    <a class="text-dark" href="<?php the_permalink(); ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h5>
-            <?php endwhile;
+             
+            $tutorial_serial_number = 1;
+            while ($query->have_posts()) : $query->the_post(); ?>
+            <h5 class="border-bottom py-2">
+                <h5> <?php echo $tutorial_serial_number;?> </h5>
+                <a class="text-dark" href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </h5>
+            <?php 
+        $tutorial_serial_number++;    
+        endwhile;
             wp_reset_postdata(); ?>
         </div>
 
@@ -47,12 +51,12 @@
                     $main_query = new WP_Query($args);
                     if ($main_query->have_posts()) :
                         while ($main_query->have_posts()) : $main_query->the_post(); ?>
-                            <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
-                        <?php
+                    <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
+                    <?php
                         endwhile;
                         wp_reset_postdata();
                     else : ?>
-                        <option disabled>কোনো আইটেম পাওয়া যায়নি।</option>
+                    <option disabled>কোনো আইটেম পাওয়া যায়নি।</option>
                     <?php endif; ?>
                 </select>
             </div>
@@ -76,16 +80,13 @@
                     $embed_url = convert_to_embed_url($video_url);
                     if ($embed_url) :
             ?>
-                        <div class="embed-responsive embed-responsive-16by9 mb-md-3 mb-1">
-                            <iframe
-                                src="<?php echo esc_url($embed_url); ?>?rel=0&autoplay=1&autohide=1&showinfo=0"
-                                frameborder="0"
-                                allowfullscreen
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-                            </iframe>
-                        </div>
-                        <h6><?php the_title(); ?></h6>
+            <div class="embed-responsive embed-responsive-16by9 mb-md-3 mb-1">
+                <iframe src="<?php echo esc_url($embed_url); ?>?rel=0&autoplay=1&autohide=1&showinfo=0" frameborder="0"
+                    allowfullscreen loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                </iframe>
+            </div>
+            <h6><?php the_title(); ?></h6>
             <?php
                     endif;
                 endwhile;
