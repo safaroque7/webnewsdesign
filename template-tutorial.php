@@ -53,6 +53,7 @@ function convert_to_embed_url($url)
                 <select class="form-control" lang="bn" onchange="if(this.value) window.location.href=this.value;">
                     <option value="" disabled hidden selected>-- ভিডিও টিউটোরিয়াল সিলেক্ট করুন --</option>
                     <?php
+                    $tutorial_serial_number = 1;
                     $main_query = new WP_Query(array(
                         'post_type'      => 'tutorial',
                         'order'          => 'ASC',
@@ -60,8 +61,10 @@ function convert_to_embed_url($url)
                     ));
                     if ($main_query->have_posts()) :
                         while ($main_query->have_posts()) : $main_query->the_post(); ?>
-                    <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
-                    <?php endwhile;
+                    <option value="<?php the_permalink(); ?>"><?php echo $tutorial_serial_number . '. '; the_title(); ?></option>
+                    <?php 
+                    $tutorial_serial_number++;
+                    endwhile;
                         wp_reset_postdata();
                     else : ?>
                     <option disabled>কোনো আইটেম পাওয়া যায়নি।</option>

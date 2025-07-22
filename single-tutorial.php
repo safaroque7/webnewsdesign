@@ -48,11 +48,15 @@
                 <select class="form-control" lang="bn" onchange="if(this.value) window.location.href=this.value;">
                     <option value="" disabled hidden selected>-- ভিডিও টিউটোরিয়াল সিলেক্ট করুন --</option>
                     <?php
+                    $tutorial_serial_number = 1;
                     $main_query = new WP_Query($args);
                     if ($main_query->have_posts()) :
                         while ($main_query->have_posts()) : $main_query->the_post(); ?>
-                    <option value="<?php the_permalink(); ?>"><?php the_title(); ?></option>
+                    <option value="<?php the_permalink(); ?>"><?php echo $tutorial_serial_number . '. '; the_title(); ?>
+                    </option>
+
                     <?php
+                    $tutorial_serial_number++;
                         endwhile;
                         wp_reset_postdata();
                     else : ?>
