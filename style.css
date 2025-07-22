@@ -1679,3 +1679,7 @@ div#faroqueIdForBottom ul li a {
   width: 100px;
   height: 100px;
 }
+
+.border-wnd {
+  border-color: #999999 !important;
+}

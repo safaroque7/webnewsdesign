@@ -1,5 +1,5 @@
 <!--*** Contact us Section-1 Start *** -->
-<div class="container-fluid vig-bg-photo position-relative px-0 mb-md-5 mb-2">
+<div class="container-fluid vig-bg-photo position-relative px-0 mb-md-5 mb-3">
     <div class="vig-bg-color position-absolute d-flex align-items-center">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
