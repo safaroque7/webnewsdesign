@@ -1,11 +1,15 @@
 <!-- Themes Start -->
 <div class="container mb-5">
   <h3 class="mb-md-4 mb-2">
-    <a class="text-dark text-decoration-underline" href="<?php echo get_permalink(221); ?>"> Themes </a>
 
-    <!-- It for live -->
-    <!-- <a class="text-dark text-decoration-underline" href="<?php //echo get_permalink(221); 
-                                                              ?>"> Themes </a> -->
+    <?php
+    $page_id = 221;
+    $page = get_post($page_id); // get_post() দিয়ে পেজ অবজেক্ট পাওয়া যায়
+    ?>
+    <a class="text-dark text-decoration-underline" href="<?php echo get_permalink($page_id); ?>">
+      <?php echo esc_html($page->post_title); ?>
+    </a>
+
   </h3>
   <div class="row">
     <?php
